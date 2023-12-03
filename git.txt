@@ -1,0 +1,60 @@
+Exercice 1 :
+
+2) Le répertoire git a été créé, il est masqué. Son adresse est donc "~/TP1/.git". Il contient les dossiers : branches, hooks, info, objects, refs et les fichiers : config, description et HEAD.
+
+3) A l'adresse "~/TP1", j'utilise la commande "touch fichier.txt" pour créer un fichier texte nommé 'fichier'.
+
+4) Message : "Sur la branche master
+
+Aucun commit
+
+Fichiers non suivis:
+  (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
+	fichier.txt
+	git.txt
+
+aucune modification ajoutée à la validation mais des fichiers non suivis sont présents (utilisez "git add" pour les suivre)"
+
+Les fichiers ne sont pas sélectionnés et apparaissent en rouge sur le terminal, pour les sélectionner il faut utiliser la commande : "git add <fichier>". Ce serait l'équivalent de mettre les fichiers dans un panier de course.
+
+5) Message : "Sur la branche master
+
+Aucun commit
+
+Modifications qui seront validées :
+  (utilisez "git rm --cached <fichier>..." pour désindexer)
+	nouveau fichier : fichier.txt
+	nouveau fichier : git.txt"
+	
+Les fichiers sont maintenant sélectionnés et apparaissent en vert sur le termianl. Ils sont dans le panier de course pour poursuivre l'analogie de la question précédente.
+
+6) Message : "[master (root-commit) 24d4bce] Un super Message
+1 file changed, 0 insertions(+), 0 deletions(-)
+create mode 100644 fichier.txt"
+
+7) Message : "Sur la branche master
+rien à valider, la copie de travail est propre"
+
+Les 2 fichiers sélectionnés ont bien été commité (les modifications ont été mises à jours et les fichiers enregistrés).
+
+8) La commande "git log -p" permet d'avoir les logs de tous les fichiers commités (les versions précédentes et les modifications apportées). Dans notre cas, on visualise la dernière version du fichier git.txt ainsi que les versions commitées précédement.
+
+9) Lorsqu'un fichier commité est modifié, la commande "git diff" révèle les modifications pas encore commitées avec un + devant les lignes consernées (et en vert).
+
+10) Création d'une clé SSH liée à ssh-agent, puis liaison de celle-ci à GitHub.
+Message lors de la commande 'git push -u origin main' : "Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 434 bytes | 434.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:kevinaoun/TP1_OPI.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'."
+
+11) On voit notre fichier fichier.txt, dans le dépôt sur GitHub, sur lequel on a bien les modifications effectuées question 9.
+
+12) On modifie le fichier fichier.txt avec la commande "gedit fichier.txt &" ou en y accédant directement.
+On ajoute ensuite le fichier avec "git add fichier.txt" afin de le commit avec "git commit -m"Un message"". On push avec "git push" pour publier la mise à jour et la rendre visible sur GitHub.
+
+Exercice 3 :
+
