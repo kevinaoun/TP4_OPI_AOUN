@@ -1,0 +1,30 @@
+###################### EXERCICE 3 : ######################
+
+1) Le caractère '&' permet de lancer un processus en arrière plan.
+
+2) La racine sous GNU/Linux est '/'.
+
+3) 'cd' et 'cd ~' permettent toujours de retourner à la racine de son compte.
+
+4) La commande "ls ~/*" renvoie la liste des fichiers et dossiers en dessous de leur adresse, pour tous les dossiers se situant au dessus du niveau du dossier actuel TP (en regardant l'arbre avec "tree"). 
+
+5) Depuis TP2, on rentre la commande "cp ../TP1/ex2.c ../../../Images/IMG216.jpg .".
+
+6) Il faut "ajouter le chemin du répertoire qui contienta.out dans la variable PATH".
+
+7) La commande "echo "OPI c'est utile.." renvoie le texte entre les guillemets, le caractère '|' prend le retour du 'echo' et l'affecte à la commande "wc -l" dont le paramètre '-l' désigne le nombre de lignes. Ainsi la commande renvoie '1', le nombre de lignes du texte "OPI c'est utile..".
+
+8) Ajouter "2>/dev/null" à la fin de la ligne de commande dans le terminal permet de masquer le message d'erreur.
+
+9) "ps -ef" selectionne tous les process en cours (-e) et les affiche en liste (-f). Le retour de cette commande est injecté dans "grep -c evince" qui recherche les lignes contenant la suite de caractères "evince" et retourne uniquement le nombre de lignes trouvées (-c). Sans le paramètre '-c', la ou les lignes contenant la suite de caractères "evince" seraient renvoyées.
+La commande retourne donc le nombre de process actifs contenant la suite de caractères "evince".
+
+10) La commande "chmod g+r,g+w file1" permet d'ajouter (+) les droits de lecture (r) et d'écriture (w) au groupe (g). Une écriture plus conscise serait : "chmod g+rw file1".
+
+11) La commande "cut -f1,5 ../../../liste_main3_2023_2024.csv" retourne le texte du fichier liste_main3_2023_2024.csv en coupant les champs dépassant le 5ème champ (-f1,5) (les champs sont séparés par des tabulations). Dans ce document, toutes les lignes n'ont que 5 champs donc la commande 'cut' les renvoie toutes. Le caractère '|' prend le retour précédant et l'injecte dans "grep Non" qui retourne les lignes contenants la chaine de caractères "Non".
+Ainsi la commande cut -f1,5 ../../../liste_main3_2023_2024.csv | grep Non" retourne :
+3224931 M.  Thomas  AUBERTIER   Non
+3284840 M.  H´eline FAUCHEU Non
+4035745 Mme Sara    GRISSIA Non
+4210027 Mme Chadha  HASSINE Non
+3673118 M.  Francis JEGOU   Non
